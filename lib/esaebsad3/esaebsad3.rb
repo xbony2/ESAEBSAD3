@@ -10,6 +10,12 @@ module ESAEBSAD3
 
 	BOT = Discordrb::Commands::CommandBot.new(token: CONFIG['discord-token'], client_id: CONFIG['discord-client'], prefix: CONFIG['discord-prefix'])
 
+	# TODO
+	ALL_USERS = 0
+	EDITORS = 1
+	MODERATORS = 2
+	OWNER = 3
+
 	COMMANDS = [
 		ESAEBSAD3::Ping,
 		ESAEBSAD3::Stop
