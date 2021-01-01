@@ -4,7 +4,7 @@ require 'tomlrb'
 
 CONFIG = Tomlrb.load_file('config.toml').freeze
 
-#puts CONFIG['discord-token']
+puts CONFIG['discord-token']
 
 bot = Discordrb::Bot.new(token: CONFIG['discord-token'])
 

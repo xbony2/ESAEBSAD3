@@ -1,11 +1,11 @@
 AllCops:
-	NewCops: enable
+  NewCops: enable
 
 Layout/IndentationStyle:
-	EnforcedStyle: tabs
+  EnforcedStyle: tabs
 
 Layout/IndentationWidth:
-	Enabled: false
+  Enabled: false
 
 Style/FrozenStringLiteralComment:
-	Enabled: false
+  Enabled: false
