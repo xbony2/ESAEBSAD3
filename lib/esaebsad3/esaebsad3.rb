@@ -1,15 +1,22 @@
 require 'discordrb'
 require 'mediawiki-butt'
+require 'require_all'
 require 'tomlrb'
 
-CONFIG = Tomlrb.load_file('config.toml').freeze
+require_rel 'commands'
 
-puts CONFIG['discord-token']
+module ESAEBSAD3
+	CONFIG = Tomlrb.load_file('config.toml').freeze
 
-bot = Discordrb::Bot.new(token: CONFIG['discord-token'])
+	BOT = Discordrb::Commands::CommandBot.new(token: CONFIG['discord-token'], client_id: CONFIG['discord-client'], prefix: CONFIG['discord-prefix'])
 
-bot.message(with_text: 'Ping!') do |event|
-	event.respond 'Pong!'
+	COMMANDS = [
+		ESAEBSAD3::Ping
+	]
+
+	COMMANDS.each {|c| BOT.include! c}
+
+	def ESAEBSAD3.run
+		BOT.run
+	end
 end
-
-bot.run
