@@ -11,7 +11,8 @@ module ESAEBSAD3
 	BOT = Discordrb::Commands::CommandBot.new(token: CONFIG['discord-token'], client_id: CONFIG['discord-client'], prefix: CONFIG['discord-prefix'])
 
 	COMMANDS = [
-		ESAEBSAD3::Ping
+		ESAEBSAD3::Ping,
+		ESAEBSAD3::Stop
 	]
 
 	COMMANDS.each {|c| BOT.include! c}
