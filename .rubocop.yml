@@ -1,11 +1,30 @@
 AllCops:
   NewCops: enable
 
+Layout/FirstArrayElementIndentation:
+  Enabled: false
+
 Layout/IndentationStyle:
   EnforcedStyle: tabs
 
 Layout/IndentationWidth:
   Enabled: false
 
+Layout/LineLength:
+  Max: 1000
+
+Layout/SpaceInsideBlockBraces:
+  EnforcedStyle: no_space
+  SpaceBeforeBlockParameters: false
+
+Style/Documentation:
+  Enabled: false
+
 Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/MutableConstant:
+  Enabled: false
+
+Style/StringLiterals:
   Enabled: false

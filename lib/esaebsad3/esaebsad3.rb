@@ -16,7 +16,7 @@ module ESAEBSAD3
 
 	COMMANDS.each {|c| BOT.include! c}
 
-	def ESAEBSAD3.run
+	def self.run
 		BOT.run
 	end
 end
