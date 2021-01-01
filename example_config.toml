@@ -1,4 +1,7 @@
 wiki = "https://ftb.gamepedia.com"
-login = "ESAEBSAD@ESAEBSAD-bot"
-wiki-token = "token"
-discord-token = "token"
+wiki-login = "ESAEBSAD@ESAEBSAD-bot"
+wiki-token = "wiki token"
+
+discord-token = "discord token"
+discord-client = "discord client"
+discord-prefix = "!"
