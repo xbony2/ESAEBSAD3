@@ -4,6 +4,9 @@ AllCops:
 Layout/FirstArrayElementIndentation:
   Enabled: false
 
+Layout/FirstHashElementIndentation:
+  Enabled: false
+
 Layout/IndentationStyle:
   EnforcedStyle: tabs
 
