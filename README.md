@@ -28,5 +28,5 @@ Here are the core dependencies of ESAEBSAD3:
 Other dependencies are listed in the `Gemfile`. Again, Bundler takes care of all of these.
 
 ## Earlier bots
-* [ESAEBSAD (1)](https://github.com/xbony2/Experimental-Self-Aware-Electronic-Based-Space-Analyzing-Droid)
+* [ESAEBSAD (the original)](https://github.com/xbony2/Experimental-Self-Aware-Electronic-Based-Space-Analyzing-Droid)
 * [ESAEBSAD2](https://github.com/xbony2/ESAEBSAD2)

@@ -14,6 +14,7 @@ module ESAEBSAD3
 
 	COMMANDS = [
 		ESAEBSAD3::Dev,
+		ESAEBSAD3::Flip,
 		ESAEBSAD3::Ping,
 		ESAEBSAD3::Stop
 	]
