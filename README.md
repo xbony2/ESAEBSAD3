@@ -15,6 +15,9 @@ A `config.toml` file must be created with the properties listed in `example_conf
 
 This is a Ruby application, so Ruby should be installed. [Bundler](https://bundler.io) should be installed as well; running `bundle` will install all other dependencies.
 
+## Running
+Run `sh start.sh` to start the bot, and `sh start.sh cont` to daemonize it (make it run in the background). If you don't have access to Bash, `ruby run.rb` is good enough for testing.
+
 ## Usage
 Just run the command `!help` and it will list all of the commands and how to use them. ezpz.
 

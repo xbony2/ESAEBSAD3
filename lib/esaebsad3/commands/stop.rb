@@ -6,6 +6,7 @@ module ESAEBSAD3
 
 		command(:stop, description: "Stops ESAEBSAD3. Moderator only.", permission_level: Permissions::OWNER_PERM) do |event|
 			event.respond "Stopping!"
+			BOT.stop
 			exit
 		end
 	end

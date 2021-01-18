@@ -3,7 +3,13 @@ module ESAEBSAD3
 		extend Discordrb::Commands::CommandContainer
 
 		command(:flip, description: "Flips a coin.") do
-			"The coin flips reveals #{rand > 0.5 ? 'heads' : 'tails'}."
+			flip = rand
+
+			if flip > 0.05
+				"The coin flip reveals #{rand > 0.5 ? 'heads' : 'tails'}."
+			else
+				"The coin lands on its side."
+			end
 		end
 	end
 end

@@ -25,6 +25,7 @@ module ESAEBSAD3
 		BOT.run(true)
 
 		Permissions.update_permissions
+		BOT.game = "with your heart"
 
 		BOT.join
 	end
