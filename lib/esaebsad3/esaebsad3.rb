@@ -20,6 +20,7 @@ module ESAEBSAD3
 		ESAEBSAD3::ArticleOfTheWeek,
 		ESAEBSAD3::Dev,
 		ESAEBSAD3::Flip,
+		ESAEBSAD3::GenLangCats,
 		ESAEBSAD3::Ping,
 		ESAEBSAD3::Stop
 	]

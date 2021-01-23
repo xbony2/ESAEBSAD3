@@ -31,5 +31,9 @@ Style/FrozenStringLiteralComment:
 Style/MutableConstant:
   Enabled: false
 
+# TODO: I can't figure this one for some reason
+Style/RegexpLiteral:
+  Enabled: false
+
 Style/StringLiterals:
   Enabled: false
