@@ -11,7 +11,7 @@ module ESAEBSAD3
 				begin
 					WIKI.create_page(category, "[[Category:#{m[1]}]]", summary: "Generated language category.") unless m.nil?
 				rescue MediaWiki::Butt::EditError => e
-					# The wanted categories page sometimes has cached entries. This is okay.
+					# The wanted categories page sometimes has cached entries. This is okay, but if there's a different exception, that's a problem.
 					throw e if e.message != 'articleexists'
 				end
 			end
