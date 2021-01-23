@@ -12,7 +12,12 @@ module ESAEBSAD3
 
 	BOT = Discordrb::Commands::CommandBot.new(token: CONFIG['discord-token'], client_id: CONFIG['discord-client'], prefix: CONFIG['discord-prefix'])
 
+	# TODO: `assertion: :bot`
+	WIKI = MediaWiki::Butt.new('https://ftb.gamepedia.com', assertion: :bot)
+	WIKI.login(CONFIG['wiki-login'], CONFIG['wiki-token'])
+
 	COMMANDS = [
+		ESAEBSAD3::ArticleOfTheWeek,
 		ESAEBSAD3::Dev,
 		ESAEBSAD3::Flip,
 		ESAEBSAD3::Ping,
