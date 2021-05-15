@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.0.1
@@ -16,4 +16,5 @@ jobs:
           rubocop_version: gemfile
           rubocop_extensions: rubocop-performance:gemfile
           github_token: ${{ secrets.github_token }}
-          reporter: github-pr-check
+          reporter: github-check
+          fail_on_error: true
