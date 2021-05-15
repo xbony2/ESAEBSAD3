@@ -16,4 +16,4 @@ jobs:
           rubocop_version: gemfile
           rubocop_extensions: rubocop-performance:gemfile
           github_token: ${{ secrets.github_token }}
-          reporter: github-pr-review # Default is github-pr-check
+          reporter: github-pr-check
