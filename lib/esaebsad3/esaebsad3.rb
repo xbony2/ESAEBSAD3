@@ -13,7 +13,7 @@ module ESAEBSAD3
 	BOT = Discordrb::Commands::CommandBot.new(token: CONFIG['discord-token'], client_id: CONFIG['discord-client'], prefix: CONFIG['discord-prefix'])
 
 	# TODO: `assertion: :bot`
-	WIKI = MediaWiki::Butt.new('https://ftb.gamepedia.com', assertion: :bot)
+	WIKI = MediaWiki::Butt.new('https://ftb.fandom.com', assertion: :bot)
 	WIKI.login(CONFIG['wiki-login'], CONFIG['wiki-token'])
 
 	COMMANDS = [
@@ -31,7 +31,7 @@ module ESAEBSAD3
 		BOT.run(true)
 
 		Permissions.update_permissions
-		BOT.game = "with your heart"
+		BOT.watching = "!help"
 
 		BOT.join
 	end
