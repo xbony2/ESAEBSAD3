@@ -14,7 +14,7 @@ module ESAEBSAD3
 
 	# TODO: `assertion: :bot`
 	WIKI = MediaWiki::Butt.new('https://ftb.fandom.com', assertion: :bot)
-	WIKI.login(CONFIG['wiki-login'], CONFIG['wiki-token'])
+	WIKI.login(CONFIG['wiki-login'], CONFIG['wiki-token']) 
 
 	COMMANDS = [
 		ESAEBSAD3::ArticleOfTheWeek,
