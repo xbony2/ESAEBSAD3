@@ -8,8 +8,6 @@ require_relative 'permissions'
 require_rel 'commands'
 
 module ESAEBSAD3
-	puts ENV.keys
-
 	BOT = Discordrb::Commands::CommandBot.new(token: ENV.fetch('DISCORD_TOKEN'), client_id: ENV.fetch('DISCORD_CLIENT'), prefix: ENV.fetch('DISCORD_PREFIX'))
 
 	WIKI = MediaWiki::Butt.new(ENV.fetch('WIKI_URL'), assertion: :bot)
