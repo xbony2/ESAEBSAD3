@@ -28,8 +28,9 @@ Here are the core dependencies of ESAEBSAD3:
 * [Bundler](https://bundler.io)
 * [discordrb](https://github.com/shardlab/discordrb)
 * [MediaWiki::Butt](https://github.com/FTB-Gamepedia/MediaWiki-Butt-Ruby)
+* [PostgreSQL](https://www.postgresql.org)
 
-Other dependencies are listed in the `Gemfile`. Again, Bundler takes care of all of these.
+Other dependencies are listed in the `Gemfile`. Again, Bundler takes care of most of these.
 
 ## Earlier bots
 * [ESAEBSAD (the original)](https://github.com/xbony2/Experimental-Self-Aware-Electronic-Based-Space-Analyzing-Droid)
