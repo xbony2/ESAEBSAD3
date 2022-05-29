@@ -8,13 +8,12 @@ require_relative 'permissions'
 require_rel 'commands'
 
 module ESAEBSAD3
-	CONFIG = Tomlrb.load_file('config.toml').freeze
+	puts ENV.keys
 
-	BOT = Discordrb::Commands::CommandBot.new(token: CONFIG['discord-token'], client_id: CONFIG['discord-client'], prefix: CONFIG['discord-prefix'])
+	BOT = Discordrb::Commands::CommandBot.new(token: ENV['DISCORD_TOKEN'], client_id: ENV['DISCORD_CLIENT'], prefix: ENV['DISCORD_PREFIX'])
 
-	# TODO: `assertion: :bot`
-	WIKI = MediaWiki::Butt.new('https://ftb.fandom.com', assertion: :bot)
-	WIKI.login(CONFIG['wiki-login'], CONFIG['wiki-token'])
+	WIKI = MediaWiki::Butt.new(ENV['WIKI_URL'], assertion: :bot)
+	WIKI.login(ENV['WIKI_LOGIN'], ENV['WIKI_TOKEN'])
 
 	COMMANDS = [
 		ESAEBSAD3::ArticleOfTheWeek,

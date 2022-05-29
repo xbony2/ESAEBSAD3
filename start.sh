@@ -1,3 +1,9 @@
+# TODO: for some reason, need to do this manually
+if [ ! -f .env ]
+then
+  export $(cat .env | xargs)
+fi
+
 export DISCORDRB_NONACL=true
 
 if [ "$1" = "cont" ]

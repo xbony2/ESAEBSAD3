@@ -60,3 +60,4 @@ build-iPhoneSimulator/
 
 # ESAEBSAD3-specific files
 config.toml
+.env
