@@ -10,10 +10,10 @@ require_rel 'commands'
 module ESAEBSAD3
 	puts ENV.keys
 
-	BOT = Discordrb::Commands::CommandBot.new(token: ENV['DISCORD_TOKEN'], client_id: ENV['DISCORD_CLIENT'], prefix: ENV['DISCORD_PREFIX'])
+	BOT = Discordrb::Commands::CommandBot.new(token: ENV.fetch('DISCORD_TOKEN'), client_id: ENV.fetch('DISCORD_CLIENT'), prefix: ENV.fetch('DISCORD_PREFIX'))
 
-	WIKI = MediaWiki::Butt.new(ENV['WIKI_URL'], assertion: :bot)
-	WIKI.login(ENV['WIKI_LOGIN'], ENV['WIKI_TOKEN'])
+	WIKI = MediaWiki::Butt.new(ENV.fetch('WIKI_URL'), assertion: :bot)
+	WIKI.login(ENV.fetch('WIKI_LOGIN'), ENV.fetch('WIKI_TOKEN'))
 
 	COMMANDS = [
 		ESAEBSAD3::ArticleOfTheWeek,
