@@ -1,9 +1,10 @@
 require 'discordrb'
 require 'mediawiki-butt'
+require 'pg'
 require 'require_all'
-require 'tomlrb'
 
 require_relative 'permissions'
+require_relative 'wiki'
 
 require_rel 'commands'
 
@@ -13,13 +14,16 @@ module ESAEBSAD3
 	WIKI = MediaWiki::Butt.new(ENV.fetch('WIKI_URL'), assertion: :bot)
 	WIKI.login(ENV.fetch('WIKI_LOGIN'), ENV.fetch('WIKI_TOKEN'))
 
+	BOT_DB = PG.connect(ENV.fetch('DB_HOST'), ENV.fetch('DB_PORT').to_i, nil, nil, ENV.fetch('DB_NAME'), ENV.fetch('DB_USER'), ENV.fetch('DB_PASSWORD'))
+
 	COMMANDS = [
 		ESAEBSAD3::ArticleOfTheWeek,
 		ESAEBSAD3::Dev,
 		ESAEBSAD3::Flip,
 		ESAEBSAD3::GenLangCats,
 		ESAEBSAD3::Ping,
-		ESAEBSAD3::Stop
+		ESAEBSAD3::Stop,
+		ESAEBSAD3::Test
 	]
 
 	COMMANDS.each {|c| BOT.include! c}

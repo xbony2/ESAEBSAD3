@@ -10,12 +10,12 @@ ALTER TYPE public.action_type
 
 CREATE TABLE IF NOT EXISTS public.actions
 (
-    id integer NOT NULL,
+    id SERIAL PRIMARY KEY,
     groupid integer NOT NULL,
     wikitext_before text COLLATE pg_catalog."default",
     wikitext_after text COLLATE pg_catalog."default",
     type action_type NOT NULL,
-    CONSTRAINT actions_pkey PRIMARY KEY (id)
+    complete boolean
     )
 
     TABLESPACE pg_default;
