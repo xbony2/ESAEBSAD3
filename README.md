@@ -1,6 +1,8 @@
 # ESAEBSAD3
 A Discord bot used by the Official FTB Wiki (mostly me) to accomplish various automated tasks. Currently a work-in-progress!
 
+(TODO: update README with possible Postgres requirements)
+
 ## E-say-bee-what?
 ESAEBSAD3 pronounced /i.ˈseɪ.bi.sæd.θɹiː/ (e-say-b-sad-three). It stands for **E**xperimental **S**elf **A**ware **E**lectronic **B**ased **S**pace **A**nalyzing **D**roid [in the] **3**rd-Dimension. Despite being in the 3rd dimension, it can't analyze space very well, so instead it just does random tasks that I want it to. Mostly this is just find-replace operations and things like that.
 
@@ -28,8 +30,9 @@ Here are the core dependencies of ESAEBSAD3:
 * [Bundler](https://bundler.io)
 * [discordrb](https://github.com/shardlab/discordrb)
 * [MediaWiki::Butt](https://github.com/FTB-Gamepedia/MediaWiki-Butt-Ruby)
+* [PostgreSQL](https://www.postgresql.org)
 
-Other dependencies are listed in the `Gemfile`. Again, Bundler takes care of all of these.
+Other dependencies are listed in the `Gemfile`. Again, Bundler takes care of most of these.
 
 ## Earlier bots
 * [ESAEBSAD (the original)](https://github.com/xbony2/Experimental-Self-Aware-Electronic-Based-Space-Analyzing-Droid)
