@@ -14,7 +14,7 @@ module ESAEBSAD3
 	WIKI = MediaWiki::Butt.new(ENV.fetch('WIKI_URL'), assertion: :bot)
 	WIKI.login(ENV.fetch('WIKI_LOGIN'), ENV.fetch('WIKI_TOKEN'))
 
-	BOT_DB = Env.key?('DATABASE_URL') ? PG.connect(ENV.fetch('DATABASE_URL')) : PG.connect(ENV.fetch('DB_HOST'), ENV.fetch('DB_PORT').to_i, nil, nil, ENV.fetch('DB_NAME'), ENV.fetch('DB_USER'), ENV.fetch('DB_PASSWORD'))
+	BOT_DB = (ENV.key?('DATABASE_URL')) ? (PG.connect(ENV.fetch('DATABASE_URL'))) : (PG.connect(ENV.fetch('DB_HOST'), ENV.fetch('DB_PORT').to_i, nil, nil, ENV.fetch('DB_NAME'), ENV.fetch('DB_USER'), ENV.fetch('DB_PASSWORD')))
 	BOT_DB.type_map_for_results = PG::BasicTypeMapForResults.new(BOT_DB)
 
 	COMMANDS = [
