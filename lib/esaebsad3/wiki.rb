@@ -44,8 +44,8 @@ module ESAEBSAD3
 			ret << "#{row['groupid']}\t"
 			ret << "#{row['command']}\t"
 			ret << "#{row['type']}\t"
-			ret << "#{row['complete'] ? "✅" : "❌"}\t"
-			ret << "#{row['atime'].strftime('%R %D')}"
+			ret << "#{row['complete'] ? '✅' : '❌'}\t"
+			ret << row['atime'].strftime('%R %D')
 
 			ret
 		end
@@ -54,8 +54,8 @@ module ESAEBSAD3
 			ret = "```\n"
 			ret << "id\tgip\tcmd\ttype\tcomplete\ttime\n"
 
-			rows.sort_by {|row| row['id']} .each do |row|
-				ret << format_row(row) + "\n"
+			rows.sort_by {|row| row['id']}.each do |row|
+				ret << "#{format_row(row)}\n"
 			end
 
 			ret << "```"
