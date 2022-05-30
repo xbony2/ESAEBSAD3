@@ -21,6 +21,7 @@ module ESAEBSAD3
 		ESAEBSAD3::Dev,
 		ESAEBSAD3::Flip,
 		ESAEBSAD3::GenLangCats,
+		ESAEBSAD3::ListActions,
 		ESAEBSAD3::Ping,
 		ESAEBSAD3::Stop,
 		ESAEBSAD3::Test

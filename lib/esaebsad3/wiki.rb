@@ -2,7 +2,7 @@ module ESAEBSAD3
 	module Wiki
 		def self.new_group_id
 			last_group_id = BOT_DB.exec(%(SELECT MAX(groupid) FROM actions;)).getvalue(0, 0)
-			last_group_id = last_group_id.nil? ? -1 : last_group_id.to_i
+			last_group_id = last_group_id.nil? ? 0 : last_group_id.to_i
 
 			last_group_id + 1
 		end
