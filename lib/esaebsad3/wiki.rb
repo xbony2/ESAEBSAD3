@@ -44,7 +44,7 @@ module ESAEBSAD3
 			ret << "#{row['groupid']}\t"
 			ret << "#{row['command']}\t"
 			ret << "#{row['type']}\t"
-			ret << "#{row['complete'] ? '✅' : '❌'}\t"
+			ret << "#{row['complete'] ? '✓' : '✗'}\t"
 			ret << row['atime'].strftime('%R %D')
 
 			ret

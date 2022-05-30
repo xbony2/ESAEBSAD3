@@ -1,6 +1,8 @@
 # ESAEBSAD3
 A Discord bot used by the Official FTB Wiki (mostly me) to accomplish various automated tasks. Currently a work-in-progress!
 
+(TODO: update README with possible Postgres requirements)
+
 ## E-say-bee-what?
 ESAEBSAD3 pronounced /i.ˈseɪ.bi.sæd.θɹiː/ (e-say-b-sad-three). It stands for **E**xperimental **S**elf **A**ware **E**lectronic **B**ased **S**pace **A**nalyzing **D**roid [in the] **3**rd-Dimension. Despite being in the 3rd dimension, it can't analyze space very well, so instead it just does random tasks that I want it to. Mostly this is just find-replace operations and things like that.
 
