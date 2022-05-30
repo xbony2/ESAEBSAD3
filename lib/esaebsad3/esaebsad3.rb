@@ -15,6 +15,7 @@ module ESAEBSAD3
 	WIKI.login(ENV.fetch('WIKI_LOGIN'), ENV.fetch('WIKI_TOKEN'))
 
 	BOT_DB = PG.connect(ENV.fetch('DB_HOST'), ENV.fetch('DB_PORT').to_i, nil, nil, ENV.fetch('DB_NAME'), ENV.fetch('DB_USER'), ENV.fetch('DB_PASSWORD'))
+	BOT_DB.type_map_for_results = PG::BasicTypeMapForResults.new(BOT_DB)
 
 	COMMANDS = [
 		ESAEBSAD3::ArticleOfTheWeek,

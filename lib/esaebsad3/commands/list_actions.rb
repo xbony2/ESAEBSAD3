@@ -3,17 +3,9 @@ module ESAEBSAD3
 		extend Discordrb::Commands::CommandContainer
 
 		command(:list_actions, description: "Lists the last 20 actions.") do
-			ret = "```\n"
+			rows = BOT_DB.exec(%(SELECT * FROM actions ORDER BY id DESC LIMIT 20;))
 
-			BOT_DB.exec(%(SELECT * FROM actions ORDER BY id DESC LIMIT 20;)) do |result|
-				result.each do |row|
-					ret << "%s %s %s %s %s %s\n" % [ row['id'], row['groupid'], row['command'], row['type'], row['complete'], row['atime'] ]
-				end
-			end
-
-			ret << "```"
-
-			ret
+			Wiki.format_rows(rows)
 		end
 	end
 end

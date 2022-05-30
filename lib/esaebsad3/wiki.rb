@@ -1,11 +1,15 @@
 module ESAEBSAD3
 	module Wiki
+		### General
+
 		def self.new_group_id
 			last_group_id = BOT_DB.exec(%(SELECT MAX(groupid) FROM actions;)).getvalue(0, 0)
 			last_group_id = last_group_id.nil? ? 0 : last_group_id.to_i
 
 			last_group_id + 1
 		end
+
+		### Actions
 
 		def self.edit(command, title, text, opts = {})
 			edit_with_group(new_group_id, command, title, text, opts)
@@ -31,6 +35,32 @@ module ESAEBSAD3
 			WIKI.create_page(title, text, opts)
 
 			BOT_DB.exec_params(%(UPDATE actions SET complete = true WHERE id = $1), [id])
+		end
+
+		## Formatting
+
+		def self.format_row(row)
+			ret = "#{row['id']}\t"
+			ret << "#{row['groupid']}\t"
+			ret << "#{row['command']}\t"
+			ret << "#{row['type']}\t"
+			ret << "#{row['complete'] ? "✅" : "❌"}\t"
+			ret << "#{row['atime'].strftime('%R %D')}"
+
+			ret
+		end
+
+		def self.format_rows(rows)
+			ret = "```\n"
+			ret << "id\tgip\tcmd\ttype\tcomplete\ttime\n"
+
+			rows.sort_by {|row| row['id']} .each do |row|
+				ret << format_row(row) + "\n"
+			end
+
+			ret << "```"
+
+			ret
 		end
 	end
 end
