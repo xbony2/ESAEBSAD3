@@ -12,10 +12,12 @@ CREATE TABLE IF NOT EXISTS public.actions
 (
     id SERIAL PRIMARY KEY,
     groupid integer NOT NULL,
+    command text NOT NULL,
     wikitext_before text COLLATE pg_catalog."default",
     wikitext_after text COLLATE pg_catalog."default",
     type action_type NOT NULL,
-    complete boolean
+    complete boolean,
+    atime timestamp default current_timestamp
     )
 
     TABLESPACE pg_default;

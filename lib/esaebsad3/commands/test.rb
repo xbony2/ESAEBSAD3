@@ -3,7 +3,7 @@ module ESAEBSAD3
 		extend Discordrb::Commands::CommandContainer
 
 		command(:test, description: "Might do anything. Owner only.", permission_level: Permissions::OWNER_PERM) do
-			Wiki.edit("User:Xbony2/JustAnotherTest", rand.to_s)
+			Wiki.edit('test', "User:Xbony2/JustAnotherTest", rand.to_s)
 
 			"Done."
 		end
