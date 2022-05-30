@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 gem('discordrb', '~> 3.4.0')
 gem('mediawiki-butt', '~> 4.0.1')

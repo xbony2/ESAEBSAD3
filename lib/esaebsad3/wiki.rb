@@ -28,9 +28,9 @@ module ESAEBSAD3
 		def self.create_page_with_group(group_id, command, title, text, opts = {})
 			id = BOT_DB.exec_params(%(INSERT INTO actions(groupid, command, wikitext_after, type, complete) VALUES($1, $2::text, $3::text, 'create', false) RETURNING id;), [group_id, command, text]).getvalue(0, 0)
 
-			WIKI.edit(title, text, opts)
+			WIKI.create_page(title, text, opts)
 
-			BOT_DB.create_page(%(UPDATE actions SET complete = true WHERE id = $1), [id])
+			BOT_DB.exec_params(%(UPDATE actions SET complete = true WHERE id = $1), [id])
 		end
 	end
 end
