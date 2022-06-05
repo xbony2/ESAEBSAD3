@@ -25,14 +25,20 @@ This is a Ruby application, so Ruby should be installed. [Bundler](https://bundl
 Just run the command `!help` and it will list all of the commands and how to use them. ezpz.
 
 ## Dependencies
-Here are the core dependencies of ESAEBSAD3:
+Here are the dependencies of ESAEBSAD3:
 * [Ruby](https://www.ruby-lang.org/en/)
-* [Bundler](https://bundler.io)
-* [discordrb](https://github.com/shardlab/discordrb)
-* [MediaWiki::Butt](https://github.com/FTB-Gamepedia/MediaWiki-Butt-Ruby)
+  * [Bundler](https://bundler.io)
+  * [discordrb](https://github.com/shardlab/discordrb)
+  * [MediaWiki::Butt](https://github.com/FTB-Gamepedia/MediaWiki-Butt-Ruby)
+  * [pg](https://github.com/ged/ruby-pg)
+  * [require_all](https://github.com/jarmo/require_all)
+  * [rubocop](https://github.com/rubocop/rubocop) (for development only)
+  * [rubocop-performance](https://github.com/rubocop/rubocop-performance) (for development only)
 * [PostgreSQL](https://www.postgresql.org)
+* [Heroku](https://heroku.com) (for deployment only)
+* [pre-commit](https://pre-commit.com) (for development only)
 
-Other dependencies are listed in the `Gemfile`. Again, Bundler takes care of most of these.
+The specific versions are listed in the `Gemfile`.
 
 ## Earlier bots
 * [ESAEBSAD (the original)](https://github.com/xbony2/Experimental-Self-Aware-Electronic-Based-Space-Analyzing-Droid)
